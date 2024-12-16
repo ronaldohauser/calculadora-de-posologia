@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Posologia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Posologia</h1>
+        <p>Insira os valores para calcular a posologia do medicamento.</p>
+        <label for="peso">Peso do Animal (kg):</label>
+        <input type="number" id="peso" placeholder="Peso em kg">
+        <label for="medicamento">Dosagem do Medicamento (mg/kg):</label>
+        <input type="number" id="medicamento" placeholder="Dosagem em mg/kg">
+        <label for="concentracao">Concentração do Medicamento (%):</label>
+        <input type="number" id="concentracao" placeholder="Concentração (%)">
+        <label for="dose">Dose do Medicamento (mg):</label>
+        <input type="number" id="dose" placeholder="Dose em mg">
+        <button onclick="calcularPosologia()">Calcular</button>
+        <div class="resultado">
+            <h3>Resultado:</h3>
+            <div id="resultado">0 mL</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="alertModal" class="modal">
+        <div class="modal-content">
+            <p>Aviso: Esta calculadora tem fins educativos. Nenhuma medicação deve ser administrada sem o devido acompanhamento de um profissional qualificado. O uso indevido pode acarretar riscos à saúde. Em caso de dúvida, consulte um veterinário especializado.</p>
+            <button id="okButton">Ok. Estou ciente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
